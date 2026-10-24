@@ -17,6 +17,7 @@ STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 TARGET="${TABLE}-restore-${STAMP,,}"
 
 log "finding newest recovery point in $DR_VAULT ($DR_REGION)"
+# shellcheck disable=SC2016  # backticks are a JMESPath literal, not shell
 RP_ARN="$(aws backup list-recovery-points-by-backup-vault --backup-vault-name "$DR_VAULT" \
   --region "$DR_REGION" --by-resource-type DynamoDB \
   --query 'reverse(sort_by(RecoveryPoints[?Status==`COMPLETED`], &CreationDate))[0].RecoveryPointArn' \
