@@ -1,0 +1,16 @@
+[project]
+name = "aws-multi-region-dr"
+version = "1.0.0"
+description = "Multi-region ledger API used to demonstrate warm-standby disaster recovery"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S"]
+ignore = ["S101"]  # assert is fine in tests
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S"]
