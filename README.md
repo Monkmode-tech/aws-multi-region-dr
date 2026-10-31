@@ -151,7 +151,7 @@ make gameday                                   # break the primary, measure, fai
 
 ## Background
 
-Built by **Caleb Tetteh** (M.S. Cloud Computing Systems, UMGC; B.S. Computer Science, Georgia Tech).
+Built by **Caleb Tetteh** (M.S. Cloud Computing, UMGC; B.S. Computer Science, Georgia Tech).
 It extends the CLCS 645 *Cloud Infrastructure Planning and Design* Unit 4 DR lab. That lab recovered a
 WordPress site in one region (us-east-2) by re-registering load-balancer targets, and its report
 proposed a warm-standby design in us-east-1 as the next step. This repository builds that next
